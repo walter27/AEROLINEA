@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:form>
+		<p:menubar class="menubar">
+			<p:submenu label="Registrar" icon="ui-icon-person">
+				<p:menuitem value="Nuevo" icon="ui-icon-contact"
+					url="/Pasajero/Pasajero.xhtml" />
+			</p:submenu>
+
+			<p:submenu label="Consulta de Vuelos" icon="ui-icon-suitcase">
+				<p:menuitem value="Horarios" icon="ui-icon-clock"
+					url="/Horarios/Horarios.xhtml" />
+				<p:menuitem value="Tarifas" icon="ui-icon-search"
+					url="/Tarifa/Tarifa.xhtml" />
+				<p:menuitem value="Informacion" icon="ui-icon-note" url="#" />
+
+			</p:submenu>
+
+			<p:submenu label="Reservas de Vuelos" icon="ui-icon-cart">
+				<p:menuitem value="Compra de Voletos" url="#" icon="ui-icon-tag" />
+			</p:submenu>
+
+			<p:menuitem value="Quit" url="/Principal/Principal.xhtml"
+				icon="ui-icon-home" />
+			
+		</p:menubar>
+	</h:form>
+</ui:composition>

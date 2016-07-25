@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<center>
+		<p:dialog id="dlgHorario" header="Horarios de Vuelos Disponibles"
+			widgetVar="dlgHorario" modal="true" height="50%" showEffect="explode"
+			hideEffect="drop" closeOnEscape="true" closable="true">
+
+			<p:dataTable id="vuelo" var="Vuelo"
+				value="#{dlgBuscarHorario.vueloList}">
+
+				<p:column headerText="Numero de Vuelo">
+					<h:outputText value="#{Vuelo.numeroVuelo}" />
+				</p:column>
+				<p:column headerText="Aeropuerto de Salida">
+					<h:outputText value="#{Vuelo.vueloOrigen}" />
+				</p:column>
+				<p:column headerText="Hora de Partida">
+					<h:outputText value="#{Vuelo.horaSalida}" />
+				</p:column>
+				<p:column headerText="Aeropuerto de Destino">
+					<h:outputText value="#{Vuelo.vueloDestino}" />
+				</p:column>
+				<p:column headerText="Hora de Llegada">
+					<h:outputText value="#{Vuelo.horaLlegada}" />
+				</p:column>
+				<p:column headerText="Escalas">
+					<h:outputText value="#{Vuelo.numEscalas}" />
+				</p:column>
+
+			</p:dataTable>
+
+
+		</p:dialog>
+	</center>
+</ui:composition>

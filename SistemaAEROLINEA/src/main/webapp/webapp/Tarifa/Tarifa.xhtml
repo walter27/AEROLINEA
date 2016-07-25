@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/WEB-INF/template/default.xhtml">
+
+	<ui:define name="content">
+		<h4>OBTEN TU PASAJE</h4>
+		<p:separator class="separator" />
+		<h:panelGrid columns="2">
+			<p:graphicImage url="/resources/icons/avion.jpg" width="300"
+				height="598" />
+			<h:panelGrid columns="1">
+				<h4>COMPRA TU PASAJE CON LAS MEJORES TARIFAS</h4>
+				<h5>Aerolíneas Argentinas te ofrece más frecuencias y mejores
+					horarios a 36 destinos de cabotaje y 26 internacionales Descubrí
+					algunos de los increíbles destinos de Argentina como Bariloche,
+					Córdoba, El Calafate, Mendoza, Iguazú, Ushuaia, Mar del Plata y
+					alguno de nuestros destinos internacionales como Barcelona, Roma,
+					Río de Janeiro, Santiago de Chile, Miami, Nueva York. ¡Elegí tu
+					destino, tu vuelo y Aerolíneas Argentinas te lleva!</h5>
+				<p:separator class="separator" />
+
+				<h:panelGrid columns="6" layaut="grid">
+					<p:selectOneMenu style="width:100%">
+						<f:selectItem itemLabel="Ida" itemValue="0" />
+						<f:selectItem itemLabel="Ida y Vuelta" itemValue="1" />
+					</p:selectOneMenu>
+					<p:outputLabel></p:outputLabel>
+					<p:outputLabel></p:outputLabel>
+					<p:inputText id="selecione" />
+					<p:watermark for="selecione" value="Pais de Origen" />
+					<p:inputText id="selecione1" />
+					<p:watermark for="selecione1" value="Pais de Destino" />
+					<p:outputLabel></p:outputLabel>
+					<p:outputLabel></p:outputLabel>
+					<p:outputLabel></p:outputLabel>
+					<p:outputLabel></p:outputLabel>
+					<p:commandButton value="Buscar" class="button2" style="width:100%"></p:commandButton>
+
+
+				</h:panelGrid>
+				<p></p>
+				<p></p>
+				<p></p>
+			</h:panelGrid>
+
+
+		</h:panelGrid>
+
+
+	</ui:define>
+</ui:composition>

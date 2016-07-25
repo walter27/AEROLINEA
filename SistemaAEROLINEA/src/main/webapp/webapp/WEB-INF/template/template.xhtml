@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:metadata>
+	<ui:insert name="metadata" />
+</f:metadata>
+
+<h:head>
+	<title>SISTEMA_FACTURACION</title>
+</h:head>
+<body bgcolor="green" background="car.jpg">
+	<p:panel>
+		<p:graphicImage url="/resources/imagenes/f_logo.png"></p:graphicImage>
+	</p:panel>
+	<p:menubar>
+		<p:submenu label="Persona" icon="ui-icon-document">
+			<p:submenu label="Registar" icon="ui-icon-contact">
+				<p:menuitem value="NewPersona" url="/Persona/Persona.xhtml" />
+			</p:submenu>
+		</p:submenu>
+
+		<p:submenu label="Producto" icon="ui-icon-document">
+			<p:submenu label="Almacen" icon="ui-icon-gear">
+				<p:menuitem value="VerInventario" url="/Persona/Producto.xhtml" />
+			</p:submenu>
+		</p:submenu>
+
+		<p:submenu label="Factura" icon="ui-icon-document">
+			<p:submenu label="Ventas" icon="ui-icon-document">
+				<p:menuitem value="NewVenta" url="/Persona/Factura.xhtml" />
+			</p:submenu>
+		</p:submenu>
+
+		<p:menuitem value="Quit" url="/Persona/Principal.xhtml"
+			icon="ui-icon-close" />
+
+	</p:menubar>
+
+	<p:layout>
+
+		<p:layoutUnit position="center" header="Sistema_Facturacion"
+			resizable="true" closable="true">
+
+			<ui:insert name="content" />
+
+		</p:layoutUnit>
+	</p:layout>
+</body>
+</html>

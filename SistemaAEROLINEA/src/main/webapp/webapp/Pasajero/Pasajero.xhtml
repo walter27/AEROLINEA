@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/WEB-INF/template/default.xhtml">
+
+	<ui:define name="content">
+
+
+		<h:form id="form">
+			<p:growl id="growl" showDetail="true" sticky="true" />
+
+
+			<h:panelGrid id="grid0" columns="3"  >
+	<h1>
+	F
+	O
+	R
+	M
+	U
+	L
+	A
+	R
+	I
+	O
+	</h1>
+
+				<h:panelGrid id="grid1" columns="1" >
+		
+					<h:panelGrid id="grid" columns="2" >
+							
+						<p:outputLabel value="Cedula:*"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.cedula}"></p:inputText>
+
+
+						<p:outputLabel value="Nombre:"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.nombre}"></p:inputText>
+
+
+						<p:outputLabel value="Pais:*"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.pais}"></p:inputText>
+
+
+						<p:outputLabel value="Ciudad"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.ciudad}"></p:inputText>
+
+
+						<p:outputLabel value="Direccion"></p:outputLabel>
+						<p:inputText
+							value="#{pasajeroControlador.actualPasajero.direccion}"></p:inputText>
+
+						<p:outputLabel value="Telefono"></p:outputLabel>
+						<p:inputText
+							value="#{pasajeroControlador.actualPasajero.telefono}"></p:inputText>
+
+						<p:outputLabel value="Celular"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.celular}"></p:inputText>
+
+						<p:outputLabel value="Correo"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.correo}"></p:inputText>
+
+						<p:outputLabel value="Sexo"></p:outputLabel>
+						<p:inputText value="#{pasajeroControlador.actualPasajero.sexo}"></p:inputText>
+
+						<p:outputLabel value=""></p:outputLabel>
+						<p:commandButton value="REGISTRAR" update="grid growl"
+							class="button"
+							actionListener="#{pasajeroControlador.addPasajero()}"
+							style="width:100%">
+							<p:confirm header="Confirmation" message="Are you sure?"
+								icon="ui-icon-alert"></p:confirm>
+						</p:commandButton>
+
+					</h:panelGrid>
+
+				</h:panelGrid>
+				
+				<p:galleria panelWidth="603" panelHeight="328" showCaption="false">
+					<p:graphicImage url="/resources/icons/tv3.jpg" styleClass="content" />
+					<p:graphicImage url="/resources/icons/tv2.jpg" styleClass="content" />
+					<p:graphicImage url="/resources/icons/tv.jpg" styleClass="content" />
+					<p:graphicImage url="/resources/icons/psj.jpg" styleClass="content" />
+					<p:graphicImage url="/resources/icons/psj1.jpg"
+						styleClass="content" />
+				     <p:graphicImage url="/resources/icons/psj2.jpg"
+						styleClass="content" />
+
+				</p:galleria>
+			</h:panelGrid>
+
+			<h1></h1>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+
